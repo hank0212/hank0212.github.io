@@ -1,119 +1,108 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tsung-Han (Hank) Lin — AI Researcher</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css" />
-    <meta name="theme-color" content="#0f1720" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tsung-Han (Hank) Lin</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- You can add any additional fonts or icons here -->
   </head>
-
   <body>
-    <header class="site-header">
-      <div class="wrapper">
-        <div class="header-inner">
-          <div class="profile">
-            <img src="assets/profile_picture.jpeg" alt="Hank Lin" class="ppic" />
-          </div>
-          <div class="meta">
-            <h1 class="name">Tsung-Han Lin <span class="han">林宗翰</span></h1>
-            <p class="subtitle">Multimodal Learning · Vision-Language · Diffusion + LLM</p>
-            <p class="bio">
-              AI researcher @ MSLab, NTU. UCLA Math of Computation. I work on multimodal systems that bridge vision and language — building models, experiments, and clean demos.
-            </p>
-
-            <div class="actions">
-              <a class="btn primary" href="assets/CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-              <a class="btn ghost" href="https://github.com/hank0212" target="_blank" rel="noopener">GitHub</a>
-              <button id="emailBtn" class="btn tiny" title="Click to copy email">Show email</button>
-            </div>
-
-            <div id="emailNotice" class="email-notice" aria-live="polite"></div>
-          </div>
+    <!-- Header with Profile & Contact Info -->
+    <div id="dhead" class="container">
+      <div class="row">
+        <div id="dpic">
+          <!-- Replace with your own profile picture -->
+          <img src="assets/profile_picture.jpeg" class="ppic" alt="Profile Picture of Tsung-Han (Hank) Lin" />
         </div>
-      </div>
-    </header>
-
-    <main class="wrapper main">
-      <section id="experience" class="card">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="timeline">
-          <article class="entry">
-            <div class="left">2024 — present</div>
-            <div class="right">
-              <div class="entry-head">
-                <strong>MSLab @ NTU</strong> · Collaboration with NVIDIA
-              </div>
-              <div class="entry-body">
-                Contributing to EDA research and multimodal pipelines. Advisor: <a href="https://www.csie.ntu.edu.tw/~sdlin/" target="_blank" rel="noopener">Prof. Shou-De Lin</a>.
-              </div>
-            </div>
-          </article>
-
-          <article class="entry">
-            <div class="left">2023 — 2024</div>
-            <div class="right">
-              <div class="entry-head"><strong>UCLA (research)</strong></div>
-              <div class="entry-body">Worked on visual social commonsense reasoning under <a href="https://web.cs.ucla.edu/~yzsun/" target="_blank" rel="noopener">Prof. Yizhou Sun</a>.</div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="publications" class="card">
-        <h2 class="section-title">Publications</h2>
-
-        <div class="pub">
-          <p class="pub-title">
-            <strong>[1]</strong> VISUAL-ALPHASOCIAL: Benchmark and Self-Reflective Chain-of-Thought Generation for Visual Social Commonsense Reasoning — Findings of EMNLP 2024
+        <div id="ddesc">
+          <h1>Tsung-Han Lin (林宗翰）</h1>
+          <h2>Multimodal Learning, Vision-Language</h2>
+          <p>
+            I am an AI researcher at MSLab @ NTU. I recieved B.S. degree at UCLA majoring in Mathematics of Computation.
+            My primary interest lies in multimodal learning, particularly exploring scalable architectures and frameworks that bridge vision and language. I am especially curious about how different modalities can align effectively to improve complex reasoning tasks and produce more robust, context-aware outputs. Feel free to contact me if you share similar interests.
           </p>
-          <p class="pub-authors">Zongyu Lin, Zhikun Xu, Yixin Wan, ... <strong>Tsung-Han Lin</strong>, ... Kai-Wei Chang, Yizhou Sun</p>
+
+
+          <div id="dcontact">
+            <a href="assets/CV.pdf"><img src="assets/resume.svg" class="iico"/></a>
+            <a href="https://github.com/hank0212"><img src="assets/cgithub.svg" class="iico"/></a>
+            <img src="assets/cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="Click to reveal email" alt="Email Icon" />
+          </div>
+          <div id="demail" style="opacity: 0; transition: opacity 0.5s;"></div>
+          <script type="text/javascript">
+            var e_is_shown = false;
+            document.getElementById('iemail').addEventListener("click", function(){
+              let demail = document.getElementById('demail');
+              demail.innerHTML = "lzh0212@g.ucla.edu";
+              demail.style.opacity = e_is_shown ? 0 : 1;
+              e_is_shown = !e_is_shown;
+            });
+          </script>
+          
+          
+
         </div>
-      </section>
-
-      <section id="projects" class="card">
-        <h2 class="section-title">Projects (shortlist)</h2>
-
-        <ul class="projects">
-          <li>
-            <strong>Diffusion+LLM</strong> — multimodal video/code generation experiments (prototype + small demos).
-          </li>
-          <li>
-            <strong>Unetfeats</strong> — layout → congestion reward modeling using MiniCPM-V embeddings.
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrapper">
-        <small>Template inspired by Karpathy • Built by Hank</small>
       </div>
-    </footer>
+    </div>
 
-    <script>
-      // email reveal + copy
-      const emailBtn = document.getElementById('emailBtn');
-      const notice = document.getElementById('emailNotice');
-      const email = 'lzh0212@g.ucla.edu';
+    <hr>
 
-      emailBtn.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(email);
-          notice.textContent = 'Email copied to clipboard — ' + email;
-          notice.classList.add('visible');
-          setTimeout(() => notice.classList.remove('visible'), 3000);
-        } catch (e) {
-          notice.textContent = email;
-          notice.classList.add('visible');
-          setTimeout(() => notice.classList.remove('visible'), 3000);
-        }
-      });
-    </script>
+    
+
+    <!-- Experience Section -->
+    <div id="experience" class="container">
+      <h2>Experience</h2>
+      <div class="entry row">
+        <div class="timespan">
+          2024 -
+        </div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/ntu.jpeg" />
+          <img src="assets/nvidia.png" style="width: 100px; max-width: none;" />
+        </div>
+        <div class="desc">
+          I am a member of MSLab at National Taiwan University, Advised by <a href="https://www.csie.ntu.edu.tw/~sdlin/">Professor Shou-De Lin</a>. contributing to an EDA project in collaboration with NVIDIA.
+        </div>
+      </div>
+      
+      <div class="entry row">
+        <div class="timespan">2023 - 2024</div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/ucla.png"style="width: 100px; max-width: none;" />
+          <img src="assets/ScAI.jpeg"style="width: 100px; max-width: none;" />
+        </div>
+        <div class="desc">
+          Contributed to social commonsense reasoning benchmark for Vision-Language Models under the supervision of <a href="https://web.cs.ucla.edu/~yzsun/">Professor Yizhou Sun</a>
+        </div>
+      </div>
+
+ 
+
+
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Publications Section -->
+    <div id="publications" class="container">
+      <h2>Publications</h2>
+      <div class="pub">
+        <p>
+          <strong>[1] VISUAL-ALPHASOCIAL: Benchmark and Self-Reflective Chain-of-Thought Generation for Visual Social Commonsense Reasoning - Findings of EMNLP 2024 </strong> 
+          
+          <p>Zongyu Lin, Zhikun Xu, Yixin Wan, Xingcheng Yao, Xiaohan Song, <strong>Tsung-Han Lin</strong>, Selina
+          Song, Pranav Subbaraman, Kai-Wei Chang, and Yizhou Sun</p>
+        </p>
+      </div>
+    </div>
+
+    <hr>
+
   </body>
+  <small>Template Modified from Andrej Karpathy</small>
+
 </html>
