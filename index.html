@@ -1,108 +1,153 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Tsung-Han (Hank) Lin</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- You can add any additional fonts or icons here -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
   <body>
     <!-- Header with Profile & Contact Info -->
     <div id="dhead" class="container">
       <div class="row">
         <div id="dpic">
-          <!-- Replace with your own profile picture -->
-          <img src="assets/profile_picture.jpeg" class="ppic" alt="Profile Picture of Tsung-Han (Hank) Lin" />
+          <img src="assets/profile_picture.jpeg" class="ppic" alt="Profile picture of Tsung-Han (Hank) Lin" />
         </div>
+
         <div id="ddesc">
-          <h1>Tsung-Han Lin (林宗翰）</h1>
-          <h2>Multimodal Learning, Vision-Language</h2>
+          <h1>Tsung-Han Lin (林宗翰)</h1>
+          <h2>Multimodal Learning, Vision–Language</h2>
+
           <p>
-            I am an AI researcher at MSLab @ NTU. I recieved B.S. degree at UCLA majoring in Mathematics of Computation.
-            My primary interest lies in multimodal learning, particularly exploring scalable architectures and frameworks that bridge vision and language. I am especially curious about how different modalities can align effectively to improve complex reasoning tasks and produce more robust, context-aware outputs. Feel free to contact me if you share similar interests.
+            I am a research assistant at National Taiwan University (NTU). I received a Bachelor's degree in
+            Mathematics of Computation from the University of California, Los Angeles (UCLA).
+          </p>
+          <p>
+            My research interests lie in multimodal learning—exploring scalable architectures and frameworks that
+            bridge vision and language. I’m especially curious about how different modalities can align to improve
+            complex reasoning and produce more robust, context-aware outputs. Feel free to reach out if you share
+            similar interests.
           </p>
 
-
           <div id="dcontact">
-            <a href="assets/CV.pdf"><img src="assets/resume.svg" class="iico"/></a>
-            <a href="https://github.com/hank0212"><img src="assets/cgithub.svg" class="iico"/></a>
-            <img src="assets/cemail.svg" style="cursor: pointer;" class="iico" id="iemail" title="Click to reveal email" alt="Email Icon" />
+            <a href="assets/CV.pdf" title="Resume (PDF)"><img src="assets/resume.svg" class="iico" alt="Resume icon" /></a>
+            <a href="https://github.com/hank0212" title="GitHub"><img src="assets/cgithub.svg" class="iico" alt="GitHub icon" /></a>
+            <img src="assets/cemail.svg" class="iico" id="iemail" style="cursor:pointer;" title="Click to reveal email" alt="Email icon" />
           </div>
-          <div id="demail" style="opacity: 0; transition: opacity 0.5s;"></div>
-          <script type="text/javascript">
-            var e_is_shown = false;
-            document.getElementById('iemail').addEventListener("click", function(){
-              let demail = document.getElementById('demail');
-              demail.innerHTML = "lzh0212@g.ucla.edu";
-              demail.style.opacity = e_is_shown ? 0 : 1;
-              e_is_shown = !e_is_shown;
-            });
-          </script>
-          
-          
+          <div id="demail" style="opacity:0; transition:opacity 0.5s;"></div>
 
+          <script>
+            // Email reveal / hide
+            (function () {
+              var shown = false;
+              var btn = document.getElementById('iemail');
+              var box = document.getElementById('demail');
+              btn.addEventListener('click', function () {
+                box.textContent = 'lzh0212@g.ucla.edu';
+                box.style.opacity = shown ? 0 : 1;
+                shown = !shown;
+              });
+            })();
+          </script>
         </div>
       </div>
     </div>
 
-    <hr>
-
-    
+    <hr />
 
     <!-- Experience Section -->
     <div id="experience" class="container">
       <h2>Experience</h2>
+
       <div class="entry row">
-        <div class="timespan">
-          2024 -
-        </div>
+        <div class="timespan">2024 –</div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="assets/ntu.jpeg" />
-          <img src="assets/nvidia.png" style="width: 100px; max-width: none;" />
+          <img src="assets/ntu.jpeg" alt="NTU logo" />
+          <img src="assets/nvidia.png" alt="NVIDIA logo" style="width:100px; max-width:none;" />
         </div>
         <div class="desc">
-          I am a member of MSLab at National Taiwan University, Advised by <a href="https://www.csie.ntu.edu.tw/~sdlin/">Professor Shou-De Lin</a>. contributing to an EDA project in collaboration with NVIDIA.
-        </div>
-      </div>
-      
-      <div class="entry row">
-        <div class="timespan">2023 - 2024</div>
-        <div class="ico">
-          <div class="entry-dot"></div>
-          <img src="assets/ucla.png"style="width: 100px; max-width: none;" />
-          <img src="assets/ScAI.jpeg"style="width: 100px; max-width: none;" />
-        </div>
-        <div class="desc">
-          Contributed to social commonsense reasoning benchmark for Vision-Language Models under the supervision of <a href="https://web.cs.ucla.edu/~yzsun/">Professor Yizhou Sun</a>
+          I am a member of MSLab at National Taiwan University, advised by
+          <a href="https://www.csie.ntu.edu.tw/~sdlin/">Prof. Shou-De Lin</a>, contributing to an EDA project in
+          collaboration with NVIDIA.
         </div>
       </div>
 
- 
-
-
+      <div class="entry row">
+        <div class="timespan">2023 – 2024</div>
+        <div class="ico">
+          <div class="entry-dot"></div>
+          <img src="assets/ucla.png" alt="UCLA logo" style="width:100px; max-width:none;" />
+          <img src="assets/ScAI.jpeg" alt="ScAI logo" style="width:100px; max-width:none;" />
+        </div>
+        <div class="desc">
+          Contributed to a social commonsense reasoning benchmark for vision–language models under
+          <a href="https://web.cs.ucla.edu/~yzsun/">Prof. Yizhou Sun</a>.
+        </div>
       </div>
     </div>
 
-    <hr>
+    <hr />
 
     <!-- Publications Section -->
     <div id="publications" class="container">
       <h2>Publications</h2>
-      <div class="pub">
-        <p>
-          <strong>[1] VISUAL-ALPHASOCIAL: Benchmark and Self-Reflective Chain-of-Thought Generation for Visual Social Commonsense Reasoning - Findings of EMNLP 2024 </strong> 
-          
-          <p>Zongyu Lin, Zhikun Xu, Yixin Wan, Xingcheng Yao, Xiaohan Song, <strong>Tsung-Han Lin</strong>, Selina
-          Song, Pranav Subbaraman, Kai-Wei Chang, and Yizhou Sun</p>
-        </p>
-      </div>
+
+      <table role="pubtable" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <!-- [2] Multimodal Chip Physical Design Engineer Assistant -->
+          <tr>
+            <td class="pub-left" width="33%" valign="top" align="center">
+              <a href="#" target="_blank" rel="noopener">
+                <!-- NOTE: keep your own asset path/name -->
+                <img class="pub-thumb" src="assets/Nvidia Framework.png" alt="Multimodal Chip Assistant teaser" />
+              </a>
+            </td>
+            <td class="pub-right" width="67%" valign="top">
+              <p class="pub-heading">
+                <span class="heading">Multimodal Chip Physical Design Engineer Assistant</span>
+              </p>
+              <p>
+                Yun-Da Tsai, Chang-Yu Chao, Liang-Yeh Shen, <strong>Tsung-Han Lin</strong>, Haoyu Yang, Chia-Tung Ho,
+                Yi-Chen Lu, Wen-Hao Liu, Shou-De Lin, Haoxing Ren
+              </p>
+              <p><strong>Under review</strong></p>
+              <p>
+                A multimodal assistant for EDA workflows; integrates visual design context with language guidance.
+              </p>
+            </td>
+          </tr>
+
+          <!-- [1] VISUAL-ALPHASOCIAL -->
+          <tr>
+            <td class="pub-left" width="33%" valign="top" align="center">
+              <a href="#" target="_blank" rel="noopener">
+                <!-- NOTE: keep your own asset path/name -->
+                <img class="pub-thumb" src="assets/V-Alphasocial Framework .png" alt="VISUAL-ALPHASOCIAL teaser" />
+              </a>
+            </td>
+            <td class="pub-right" width="67%" valign="top">
+              <p class="pub-heading">
+                <span class="heading">
+                  VISUAL-ALPHASOCIAL: Benchmark and Self-Reflective Chain-of-Thought Generation for Visual Social
+                  Commonsense Reasoning
+                </span>
+              </p>
+              <p>
+                Zongyu Lin, Zhikun Xu, Yixin Wan, Xingcheng Yao, Xiaohan Song, <strong>Tsung-Han Lin</strong>, Selina
+                Song, Pranav Subbaraman, Kai-Wei Chang, Yizhou Sun
+              </p>
+              <p><strong>ACL Findings 2025</strong></p>
+              <p>Benchmark + self-reflective CoT for visual social commonsense reasoning.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <hr>
-
+    <br /><br />
+    <small class="container">Template modified from Andrej Karpathy</small>
+    <br /><br />
   </body>
-  <small>Template Modified from Andrej Karpathy</small>
-
 </html>
